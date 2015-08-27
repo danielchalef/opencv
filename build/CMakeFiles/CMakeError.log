@@ -1,0 +1,838 @@
+Determining if the system is big endian passed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec787144735/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec787144735.dir/build.make CMakeFiles/cmTryCompileExec787144735.dir/build
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec787144735.dir/TestEndianess.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec787144735.dir/TestEndianess.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/TestEndianess.c
+Linking C executable cmTryCompileExec787144735
+/usr/bin/cmake -E cmake_link_script CMakeFiles/cmTryCompileExec787144735.dir/link.txt --verbose=1
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections  -O3 -DNDEBUG    -L/usr/lib/x86_64-linux-gnu/ CMakeFiles/cmTryCompileExec787144735.dir/TestEndianess.c.o  -o cmTryCompileExec787144735 -rdynamic 
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+
+TestEndianess.c:
+/* A 16 bit integer is required. */
+typedef unsigned short cmakeint16;
+
+/* On a little endian machine, these 16bit ints will give "THIS IS LITTLE ENDIAN."
+   On a big endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_little[] =  {0x4854, 0x5349, 0x4920, 0x2053, 0x494c, 0x5454, 0x454c, 0x4520, 0x444e, 0x4149, 0x2e4e, 0x0000};
+
+/* on a big endian machine, these 16bit ints will give "THIS IS BIG ENDIAN."
+   On a little endian machine the characters will be exchanged pairwise. */
+const cmakeint16 info_big[] =     {0x5448, 0x4953, 0x2049, 0x5320, 0x4249, 0x4720, 0x454e, 0x4449, 0x414e, 0x2e2e, 0x0000};
+
+#ifdef __CLASSIC_C__
+int main(argc, argv) int argc; char *argv[];
+#else
+int main(int argc, char *argv[])
+#endif
+{
+  int require = 0;
+  require += info_little[argc];
+  require += info_big[argc];
+  (void)argv;
+  return require;
+}
+
+
+Determining if the include file linux/videodev.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3506902024/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3506902024.dir/build.make CMakeFiles/cmTryCompileExec3506902024.dir/build
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3506902024.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec3506902024.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatal error: linux/videodev.h: No such file or directory
+ #include <linux/videodev.h>
+                            ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec3506902024.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3506902024.dir/CheckIncludeFile.c.o' failed
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3506902024.dir/CheckIncludeFile.c.o] Error 1
+Makefile:118: recipe for target 'cmTryCompileExec3506902024/fast' failed
+make: *** [cmTryCompileExec3506902024/fast] Error 2
+
+
+Determining if the include file sys/videoio.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1917928078/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1917928078.dir/build.make CMakeFiles/cmTryCompileExec1917928078.dir/build
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1917928078.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec1917928078.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatal error: sys/videoio.h: No such file or directory
+ #include <sys/videoio.h>
+                         ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec1917928078.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec1917928078.dir/CheckIncludeFile.c.o' failed
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec1917928078.dir/CheckIncludeFile.c.o] Error 1
+Makefile:118: recipe for target 'cmTryCompileExec1917928078/fast' failed
+make: *** [cmTryCompileExec1917928078/fast] Error 2
+
+
+Determining if the include file ffmpeg/avformat.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1877859004/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1877859004.dir/build.make CMakeFiles/cmTryCompileExec1877859004.dir/build
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1877859004.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -msse3 -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec1877859004.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:29: fatal error: ffmpeg/avformat.h: No such file or directory
+ #include <ffmpeg/avformat.h>
+                             ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec1877859004.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec1877859004.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec1877859004.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+Makefile:118: recipe for target 'cmTryCompileExec1877859004/fast' failed
+make: *** [cmTryCompileExec1877859004/fast] Error 2
+
+
+Determining if the include file linux/videodev.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec475515685/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec475515685.dir/build.make CMakeFiles/cmTryCompileExec475515685.dir/build
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec475515685.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec475515685.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatal error: linux/videodev.h: No such file or directory
+ #include <linux/videodev.h>
+                            ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec475515685.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec475515685.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec475515685.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+Makefile:118: recipe for target 'cmTryCompileExec475515685/fast' failed
+make: *** [cmTryCompileExec475515685/fast] Error 2
+
+
+Determining if the include file sys/videoio.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3825325184/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3825325184.dir/build.make CMakeFiles/cmTryCompileExec3825325184.dir/build
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3825325184.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec3825325184.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatal error: sys/videoio.h: No such file or directory
+ #include <sys/videoio.h>
+                         ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec3825325184.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3825325184.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec3825325184.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+Makefile:118: recipe for target 'cmTryCompileExec3825325184/fast' failed
+make: *** [cmTryCompileExec3825325184/fast] Error 2
+
+
+Determining if the include file ffmpeg/avformat.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3340054751/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3340054751.dir/build.make CMakeFiles/cmTryCompileExec3340054751.dir/build
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3340054751.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec3340054751.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:29: fatal error: ffmpeg/avformat.h: No such file or directory
+ #include <ffmpeg/avformat.h>
+                             ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec3340054751.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3340054751.dir/CheckIncludeFile.c.o' failed
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3340054751.dir/CheckIncludeFile.c.o] Error 1
+Makefile:118: recipe for target 'cmTryCompileExec3340054751/fast' failed
+make: *** [cmTryCompileExec3340054751/fast] Error 2
+
+
+Determining if the include file linux/videodev.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3034401540/fast"
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3034401540.dir/build.make CMakeFiles/cmTryCompileExec3034401540.dir/build
+make[2]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3034401540.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec3034401540.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatal error: linux/videodev.h: No such file or directory
+ #include <linux/videodev.h>
+                            ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec3034401540.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3034401540.dir/CheckIncludeFile.c.o' failed
+make[2]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+make[2]: *** [CMakeFiles/cmTryCompileExec3034401540.dir/CheckIncludeFile.c.o] Error 1
+Makefile:118: recipe for target 'cmTryCompileExec3034401540/fast' failed
+make[1]: *** [cmTryCompileExec3034401540/fast] Error 2
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file sys/videoio.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1510294486/fast"
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1510294486.dir/build.make CMakeFiles/cmTryCompileExec1510294486.dir/build
+make[2]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1510294486.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec1510294486.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatal error: sys/videoio.h: No such file or directory
+ #include <sys/videoio.h>
+                         ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec1510294486.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec1510294486.dir/CheckIncludeFile.c.o' failed
+make[2]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+make[2]: *** [CMakeFiles/cmTryCompileExec1510294486.dir/CheckIncludeFile.c.o] Error 1
+Makefile:118: recipe for target 'cmTryCompileExec1510294486/fast' failed
+make[1]: *** [cmTryCompileExec1510294486/fast] Error 2
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file ffmpeg/avformat.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2644442481/fast"
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2644442481.dir/build.make CMakeFiles/cmTryCompileExec2644442481.dir/build
+make[2]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2644442481.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec2644442481.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:29: fatal error: ffmpeg/avformat.h: No such file or directory
+ #include <ffmpeg/avformat.h>
+                             ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec2644442481.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec2644442481.dir/CheckIncludeFile.c.o' failed
+make[2]: *** [CMakeFiles/cmTryCompileExec2644442481.dir/CheckIncludeFile.c.o] Error 1
+make[2]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+Makefile:118: recipe for target 'cmTryCompileExec2644442481/fast' failed
+make[1]: *** [cmTryCompileExec2644442481/fast] Error 2
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file linux/videodev.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2722724956/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2722724956.dir/build.make CMakeFiles/cmTryCompileExec2722724956.dir/build
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2722724956.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -mavx2 -mfma -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec2722724956.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatal error: linux/videodev.h: No such file or directory
+ #include <linux/videodev.h>
+                            ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec2722724956.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec2722724956.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec2722724956.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+Makefile:118: recipe for target 'cmTryCompileExec2722724956/fast' failed
+make: *** [cmTryCompileExec2722724956/fast] Error 2
+
+
+Determining if the include file sys/videoio.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec561793685/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec561793685.dir/build.make CMakeFiles/cmTryCompileExec561793685.dir/build
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec561793685.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -mavx2 -mfma -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec561793685.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatal error: sys/videoio.h: No such file or directory
+ #include <sys/videoio.h>
+                         ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec561793685.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec561793685.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec561793685.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+Makefile:118: recipe for target 'cmTryCompileExec561793685/fast' failed
+make: *** [cmTryCompileExec561793685/fast] Error 2
+
+
+Determining if the include file ffmpeg/avformat.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec874082588/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec874082588.dir/build.make CMakeFiles/cmTryCompileExec874082588.dir/build
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec874082588.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -mavx2 -mfma -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec874082588.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:29: fatal error: ffmpeg/avformat.h: No such file or directory
+ #include <ffmpeg/avformat.h>
+                             ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec874082588.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec874082588.dir/CheckIncludeFile.c.o' failed
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec874082588.dir/CheckIncludeFile.c.o] Error 1
+Makefile:118: recipe for target 'cmTryCompileExec874082588/fast' failed
+make: *** [cmTryCompileExec874082588/fast] Error 2
+
+
+Determining if the include file linux/videodev.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec624292872/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec624292872.dir/build.make CMakeFiles/cmTryCompileExec624292872.dir/build
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec624292872.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -mavx2 -mfma -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec624292872.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatal error: linux/videodev.h: No such file or directory
+ #include <linux/videodev.h>
+                            ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec624292872.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec624292872.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec624292872.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+Makefile:118: recipe for target 'cmTryCompileExec624292872/fast' failed
+make: *** [cmTryCompileExec624292872/fast] Error 2
+
+
+Determining if the include file sys/videoio.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1409929385/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1409929385.dir/build.make CMakeFiles/cmTryCompileExec1409929385.dir/build
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1409929385.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -mavx2 -mfma -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec1409929385.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatal error: sys/videoio.h: No such file or directory
+ #include <sys/videoio.h>
+                         ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec1409929385.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec1409929385.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec1409929385.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+Makefile:118: recipe for target 'cmTryCompileExec1409929385/fast' failed
+make: *** [cmTryCompileExec1409929385/fast] Error 2
+
+
+Determining if the include file ffmpeg/avformat.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec46392153/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec46392153.dir/build.make CMakeFiles/cmTryCompileExec46392153.dir/build
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec46392153.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -mavx2 -mfma -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec46392153.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:29: fatal error: ffmpeg/avformat.h: No such file or directory
+ #include <ffmpeg/avformat.h>
+                             ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec46392153.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec46392153.dir/CheckIncludeFile.c.o' failed
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec46392153.dir/CheckIncludeFile.c.o] Error 1
+Makefile:118: recipe for target 'cmTryCompileExec46392153/fast' failed
+make: *** [cmTryCompileExec46392153/fast] Error 2
+
+
+Determining if the include file linux/videodev.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3149227057/fast"
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3149227057.dir/build.make CMakeFiles/cmTryCompileExec3149227057.dir/build
+make[2]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3149227057.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -mavx2 -mfma -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec3149227057.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatal error: linux/videodev.h: No such file or directory
+ #include <linux/videodev.h>
+                            ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec3149227057.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3149227057.dir/CheckIncludeFile.c.o' failed
+make[2]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+make[2]: *** [CMakeFiles/cmTryCompileExec3149227057.dir/CheckIncludeFile.c.o] Error 1
+Makefile:118: recipe for target 'cmTryCompileExec3149227057/fast' failed
+make[1]: *** [cmTryCompileExec3149227057/fast] Error 2
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file sys/videoio.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2692362156/fast"
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2692362156.dir/build.make CMakeFiles/cmTryCompileExec2692362156.dir/build
+make[2]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2692362156.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -mavx2 -mfma -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec2692362156.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatal error: sys/videoio.h: No such file or directory
+ #include <sys/videoio.h>
+                         ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec2692362156.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec2692362156.dir/CheckIncludeFile.c.o' failed
+make[2]: *** [CMakeFiles/cmTryCompileExec2692362156.dir/CheckIncludeFile.c.o] Error 1
+make[2]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+Makefile:118: recipe for target 'cmTryCompileExec2692362156/fast' failed
+make[1]: *** [cmTryCompileExec2692362156/fast] Error 2
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file ffmpeg/avformat.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2144436020/fast"
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2144436020.dir/build.make CMakeFiles/cmTryCompileExec2144436020.dir/build
+make[2]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2144436020.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -mavx2 -mfma -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec2144436020.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:29: fatal error: ffmpeg/avformat.h: No such file or directory
+ #include <ffmpeg/avformat.h>
+                             ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec2144436020.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec2144436020.dir/CheckIncludeFile.c.o' failed
+make[2]: *** [CMakeFiles/cmTryCompileExec2144436020.dir/CheckIncludeFile.c.o] Error 1
+make[2]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+Makefile:118: recipe for target 'cmTryCompileExec2144436020/fast' failed
+make[1]: *** [cmTryCompileExec2144436020/fast] Error 2
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file linux/videodev.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec147066916/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec147066916.dir/build.make CMakeFiles/cmTryCompileExec147066916.dir/build
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec147066916.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -mavx2 -mfma -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec147066916.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatal error: linux/videodev.h: No such file or directory
+ #include <linux/videodev.h>
+                            ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec147066916.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec147066916.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec147066916.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+Makefile:118: recipe for target 'cmTryCompileExec147066916/fast' failed
+make: *** [cmTryCompileExec147066916/fast] Error 2
+
+
+Determining if the include file sys/videoio.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1512161369/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1512161369.dir/build.make CMakeFiles/cmTryCompileExec1512161369.dir/build
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1512161369.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -mavx2 -mfma -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec1512161369.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatal error: sys/videoio.h: No such file or directory
+ #include <sys/videoio.h>
+                         ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec1512161369.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec1512161369.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec1512161369.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+Makefile:118: recipe for target 'cmTryCompileExec1512161369/fast' failed
+make: *** [cmTryCompileExec1512161369/fast] Error 2
+
+
+Determining if the include file ffmpeg/avformat.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2401199178/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2401199178.dir/build.make CMakeFiles/cmTryCompileExec2401199178.dir/build
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2401199178.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -mavx2 -mfma -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec2401199178.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:29: fatal error: ffmpeg/avformat.h: No such file or directory
+ #include <ffmpeg/avformat.h>
+                             ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec2401199178.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec2401199178.dir/CheckIncludeFile.c.o' failed
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec2401199178.dir/CheckIncludeFile.c.o] Error 1
+Makefile:118: recipe for target 'cmTryCompileExec2401199178/fast' failed
+make: *** [cmTryCompileExec2401199178/fast] Error 2
+
+
+Determining if the include file linux/videodev.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2598028482/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2598028482.dir/build.make CMakeFiles/cmTryCompileExec2598028482.dir/build
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2598028482.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -mavx2 -mfma -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec2598028482.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatal error: linux/videodev.h: No such file or directory
+ #include <linux/videodev.h>
+                            ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec2598028482.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec2598028482.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec2598028482.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+Makefile:118: recipe for target 'cmTryCompileExec2598028482/fast' failed
+make: *** [cmTryCompileExec2598028482/fast] Error 2
+
+
+Determining if the include file sys/videoio.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec4271272551/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4271272551.dir/build.make CMakeFiles/cmTryCompileExec4271272551.dir/build
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4271272551.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -mavx2 -mfma -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec4271272551.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatal error: sys/videoio.h: No such file or directory
+ #include <sys/videoio.h>
+                         ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec4271272551.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec4271272551.dir/CheckIncludeFile.c.o' failed
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec4271272551.dir/CheckIncludeFile.c.o] Error 1
+Makefile:118: recipe for target 'cmTryCompileExec4271272551/fast' failed
+make: *** [cmTryCompileExec4271272551/fast] Error 2
+
+
+Determining if the include file ffmpeg/avformat.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2433000658/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2433000658.dir/build.make CMakeFiles/cmTryCompileExec2433000658.dir/build
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2433000658.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -mavx2 -mfma -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec2433000658.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:29: fatal error: ffmpeg/avformat.h: No such file or directory
+ #include <ffmpeg/avformat.h>
+                             ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec2433000658.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec2433000658.dir/CheckIncludeFile.c.o' failed
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec2433000658.dir/CheckIncludeFile.c.o] Error 1
+Makefile:118: recipe for target 'cmTryCompileExec2433000658/fast' failed
+make: *** [cmTryCompileExec2433000658/fast] Error 2
+
+
+Determining if the include file linux/videodev.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec4086479987/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4086479987.dir/build.make CMakeFiles/cmTryCompileExec4086479987.dir/build
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4086479987.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -mavx2 -mfma -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec4086479987.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatal error: linux/videodev.h: No such file or directory
+ #include <linux/videodev.h>
+                            ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec4086479987.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec4086479987.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec4086479987.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+Makefile:118: recipe for target 'cmTryCompileExec4086479987/fast' failed
+make: *** [cmTryCompileExec4086479987/fast] Error 2
+
+
+Determining if the include file sys/videoio.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3613077166/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3613077166.dir/build.make CMakeFiles/cmTryCompileExec3613077166.dir/build
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3613077166.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -mavx2 -mfma -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec3613077166.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatal error: sys/videoio.h: No such file or directory
+ #include <sys/videoio.h>
+                         ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec3613077166.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3613077166.dir/CheckIncludeFile.c.o' failed
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec3613077166.dir/CheckIncludeFile.c.o] Error 1
+Makefile:118: recipe for target 'cmTryCompileExec3613077166/fast' failed
+make: *** [cmTryCompileExec3613077166/fast] Error 2
+
+
+Determining if the include file ffmpeg/avformat.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec908832870/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec908832870.dir/build.make CMakeFiles/cmTryCompileExec908832870.dir/build
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec908832870.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=non-virtual-dtor -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -mavx2 -mfma -ffunction-sections -fvisibility=hidden  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec908832870.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:29: fatal error: ffmpeg/avformat.h: No such file or directory
+ #include <ffmpeg/avformat.h>
+                             ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec908832870.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec908832870.dir/CheckIncludeFile.c.o' failed
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec908832870.dir/CheckIncludeFile.c.o] Error 1
+Makefile:118: recipe for target 'cmTryCompileExec908832870/fast' failed
+make: *** [cmTryCompileExec908832870/fast] Error 2
+
+
+Determining if the include file linux/videodev.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3551120024/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3551120024.dir/build.make CMakeFiles/cmTryCompileExec3551120024.dir/build
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3551120024.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -mavx2 -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec3551120024.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatal error: linux/videodev.h: No such file or directory
+ #include <linux/videodev.h>
+                            ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec3551120024.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3551120024.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec3551120024.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+Makefile:118: recipe for target 'cmTryCompileExec3551120024/fast' failed
+make: *** [cmTryCompileExec3551120024/fast] Error 2
+
+
+Determining if the include file sys/videoio.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2308693921/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2308693921.dir/build.make CMakeFiles/cmTryCompileExec2308693921.dir/build
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2308693921.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -mavx2 -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec2308693921.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatal error: sys/videoio.h: No such file or directory
+ #include <sys/videoio.h>
+                         ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec2308693921.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec2308693921.dir/CheckIncludeFile.c.o' failed
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec2308693921.dir/CheckIncludeFile.c.o] Error 1
+Makefile:118: recipe for target 'cmTryCompileExec2308693921/fast' failed
+make: *** [cmTryCompileExec2308693921/fast] Error 2
+
+
+Determining if the include file ffmpeg/avformat.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec4109406520/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec4109406520.dir/build.make CMakeFiles/cmTryCompileExec4109406520.dir/build
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec4109406520.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -mavx2 -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec4109406520.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:29: fatal error: ffmpeg/avformat.h: No such file or directory
+ #include <ffmpeg/avformat.h>
+                             ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec4109406520.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec4109406520.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec4109406520.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+Makefile:118: recipe for target 'cmTryCompileExec4109406520/fast' failed
+make: *** [cmTryCompileExec4109406520/fast] Error 2
+
+
+Determining if the include file linux/videodev.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1534058116/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1534058116.dir/build.make CMakeFiles/cmTryCompileExec1534058116.dir/build
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1534058116.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -mavx2 -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec1534058116.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatal error: linux/videodev.h: No such file or directory
+ #include <linux/videodev.h>
+                            ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec1534058116.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec1534058116.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec1534058116.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+Makefile:118: recipe for target 'cmTryCompileExec1534058116/fast' failed
+make: *** [cmTryCompileExec1534058116/fast] Error 2
+
+
+Determining if the include file sys/videoio.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1307520736/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1307520736.dir/build.make CMakeFiles/cmTryCompileExec1307520736.dir/build
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1307520736.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -mavx2 -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec1307520736.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatal error: sys/videoio.h: No such file or directory
+ #include <sys/videoio.h>
+                         ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec1307520736.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec1307520736.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec1307520736.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+Makefile:118: recipe for target 'cmTryCompileExec1307520736/fast' failed
+make: *** [cmTryCompileExec1307520736/fast] Error 2
+
+
+Determining if the include file ffmpeg/avformat.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2944628587/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2944628587.dir/build.make CMakeFiles/cmTryCompileExec2944628587.dir/build
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2944628587.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -mavx2 -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec2944628587.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:29: fatal error: ffmpeg/avformat.h: No such file or directory
+ #include <ffmpeg/avformat.h>
+                             ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec2944628587.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec2944628587.dir/CheckIncludeFile.c.o' failed
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec2944628587.dir/CheckIncludeFile.c.o] Error 1
+Makefile:118: recipe for target 'cmTryCompileExec2944628587/fast' failed
+make: *** [cmTryCompileExec2944628587/fast] Error 2
+
+
+Determining if the include file linux/videodev.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec53619196/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec53619196.dir/build.make CMakeFiles/cmTryCompileExec53619196.dir/build
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec53619196.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -mavx2 -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec53619196.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatal error: linux/videodev.h: No such file or directory
+ #include <linux/videodev.h>
+                            ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec53619196.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec53619196.dir/CheckIncludeFile.c.o' failed
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec53619196.dir/CheckIncludeFile.c.o] Error 1
+Makefile:118: recipe for target 'cmTryCompileExec53619196/fast' failed
+make: *** [cmTryCompileExec53619196/fast] Error 2
+
+
+Determining if the include file sys/videoio.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1407464483/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1407464483.dir/build.make CMakeFiles/cmTryCompileExec1407464483.dir/build
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1407464483.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -mavx2 -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec1407464483.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatal error: sys/videoio.h: No such file or directory
+ #include <sys/videoio.h>
+                         ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec1407464483.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec1407464483.dir/CheckIncludeFile.c.o' failed
+make[1]: *** [CMakeFiles/cmTryCompileExec1407464483.dir/CheckIncludeFile.c.o] Error 1
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+Makefile:118: recipe for target 'cmTryCompileExec1407464483/fast' failed
+make: *** [cmTryCompileExec1407464483/fast] Error 2
+
+
+Determining if the include file ffmpeg/avformat.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec1227444022/fast"
+/usr/bin/make -f CMakeFiles/cmTryCompileExec1227444022.dir/build.make CMakeFiles/cmTryCompileExec1227444022.dir/build
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec1227444022.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -mavx2 -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec1227444022.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:29: fatal error: ffmpeg/avformat.h: No such file or directory
+ #include <ffmpeg/avformat.h>
+                             ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec1227444022.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec1227444022.dir/CheckIncludeFile.c.o' failed
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+make[1]: *** [CMakeFiles/cmTryCompileExec1227444022.dir/CheckIncludeFile.c.o] Error 1
+Makefile:118: recipe for target 'cmTryCompileExec1227444022/fast' failed
+make: *** [cmTryCompileExec1227444022/fast] Error 2
+
+
+Determining if the include file linux/videodev.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec2766412641/fast"
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec2766412641.dir/build.make CMakeFiles/cmTryCompileExec2766412641.dir/build
+make[2]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec2766412641.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -mavx2 -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec2766412641.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:28: fatal error: linux/videodev.h: No such file or directory
+ #include <linux/videodev.h>
+                            ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec2766412641.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec2766412641.dir/CheckIncludeFile.c.o' failed
+make[2]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+make[2]: *** [CMakeFiles/cmTryCompileExec2766412641.dir/CheckIncludeFile.c.o] Error 1
+Makefile:118: recipe for target 'cmTryCompileExec2766412641/fast' failed
+make[1]: *** [cmTryCompileExec2766412641/fast] Error 2
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file sys/videoio.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3147826804/fast"
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3147826804.dir/build.make CMakeFiles/cmTryCompileExec3147826804.dir/build
+make[2]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3147826804.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -mavx2 -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec3147826804.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:25: fatal error: sys/videoio.h: No such file or directory
+ #include <sys/videoio.h>
+                         ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec3147826804.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3147826804.dir/CheckIncludeFile.c.o' failed
+make[2]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+make[2]: *** [CMakeFiles/cmTryCompileExec3147826804.dir/CheckIncludeFile.c.o] Error 1
+Makefile:118: recipe for target 'cmTryCompileExec3147826804/fast' failed
+make[1]: *** [cmTryCompileExec3147826804/fast] Error 2
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+
+
+Determining if the include file ffmpeg/avformat.h exists failed with the following output:
+Change Dir: /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp
+
+Run Build Command:"/usr/bin/make" "cmTryCompileExec3955285033/fast"
+make[1]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/make -f CMakeFiles/cmTryCompileExec3955285033.dir/build.make CMakeFiles/cmTryCompileExec3955285033.dir/build
+make[2]: Entering directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+/usr/bin/cmake -E cmake_progress_report /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CMakeFiles 1
+Building C object CMakeFiles/cmTryCompileExec3955285033.dir/CheckIncludeFile.c.o
+/usr/bin/cc   -I/usr/lib/x86_64-linux-gnu/    -fsigned-char -W -Wall -Werror=return-type -Werror=address -Werror=sequence-point -Wformat -Werror=format-security -Wmissing-declarations -Wmissing-prototypes -Wstrict-prototypes -Wundef -Winit-self -Wpointer-arith -Wshadow -Wno-narrowing -fdiagnostics-show-option -Wno-long-long -pthread -fomit-frame-pointer -msse -msse2 -mavx -mavx2 -ffunction-sections  -O3 -DNDEBUG   -o CMakeFiles/cmTryCompileExec3955285033.dir/CheckIncludeFile.c.o   -c /home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c
+/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp/CheckIncludeFile.c:1:29: fatal error: ffmpeg/avformat.h: No such file or directory
+ #include <ffmpeg/avformat.h>
+                             ^
+compilation terminated.
+CMakeFiles/cmTryCompileExec3955285033.dir/build.make:57: recipe for target 'CMakeFiles/cmTryCompileExec3955285033.dir/CheckIncludeFile.c.o' failed
+make[2]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+make[2]: *** [CMakeFiles/cmTryCompileExec3955285033.dir/CheckIncludeFile.c.o] Error 1
+Makefile:118: recipe for target 'cmTryCompileExec3955285033/fast' failed
+make[1]: *** [cmTryCompileExec3955285033/fast] Error 2
+make[1]: Leaving directory '/home/daniel/projects/opencv/build/CMakeFiles/CMakeTmp'
+
+
